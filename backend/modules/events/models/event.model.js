@@ -6,11 +6,19 @@ const EventSchema = new Schema({
     type: String,
     required: true,
   },
-  description: {
+  improve: {
     type: String,
     required: true,
   },
-  social_media_link: {
+  keep: {
+    type: String,
+    required: true,
+  },
+  sugestions: {
+    type: String,
+    required: true,
+  },
+  feedback: {
     type: String,
     required: true,
   },
