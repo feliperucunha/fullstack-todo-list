@@ -27,4 +27,5 @@
     4. "yarn dev"
 
 ## Observações
-    1. No requisito "- Deve ser possível visualizar os feedbacks criados por mim e também os feedback que eu criei para outras pessoas." não sei o que o avaliador quis realmente dizer, mas ambos os feedbacks descritos se referem ao mesmo, ou seja, o que foi criado pelo usuário.
+    - No requisito "- Deve ser possível visualizar os feedbacks criados por mim e também os feedback que eu criei para outras pessoas." não sei o que o avaliador quis realmente dizer, mas ambos os feedbacks descritos se referem ao mesmo, ou seja, o que foi criado pelo usuário.
+    - Desculpe pelo uso do inglês junto ao Português. Vi no código fonte do site da Viasoft que geralmente vocês utilizam bastante o Português no desenvolvimento, mas eu sempre usei o Inglês como padrão. Não é algo que não possa ser mudado.
