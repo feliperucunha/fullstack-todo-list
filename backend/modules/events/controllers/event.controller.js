@@ -11,15 +11,17 @@ module.exports = {
 
   createEvent: async (req, res) => {
     console.log(req.body);
-    const { name, description, date, social_media_link } = req.body;
-    console.log(name, description, date, social_media_link);
+    const { name, improve, date, keep, sugestions, feedback } = req.body;
+    console.log(name, improve, date, keep, sugestions, feedback);
     //REALIZAR VALIDAÇAO DOS INPUTS
     try {
       const event = await Event.create({
         name,
-        description,
+        improve,
         date,
-        social_media_link,
+        keep,
+        sugestions,
+        feedback
       });
       return res.status(201).json({ event });
     } catch (err) {

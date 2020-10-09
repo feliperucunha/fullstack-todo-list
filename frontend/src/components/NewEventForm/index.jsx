@@ -52,7 +52,7 @@ export default function NewEventForm() {
   const [keep, setKeep] = useState("");
   const [sugestions, setSugestions] = useState("");
   const [feedback, setFeedback] = useState("");
-  const [date, setDate] = useState("2020-06-15");
+  const [date, setDate] = useState("2020-10-09");
   const handleFormSubmit = () => {
     const newEvent = {
       name,

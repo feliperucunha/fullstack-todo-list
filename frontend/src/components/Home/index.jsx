@@ -4,7 +4,6 @@ import {
   Typography,
   List,
   ListItem,
-  Divider,
   ListItemText,
   ListItemSecondaryAction,
   IconButton,
@@ -82,7 +81,7 @@ export default function Home() {
     <div className={classes.root}>
       <Paper elevation={8} className={classes.paper}>
         <Typography className={classes.title} variant="h5">
-          Pending Approval
+          Feedbacks recentes
         </Typography>
         <List className={classes.list}>
           {events.length > 0 &&
@@ -113,7 +112,7 @@ export default function Home() {
       </Paper>
       <Paper elevation={8} className={classes.paper}>
         <Typography className={classes.title} variant="h5">
-          Approved Events
+          Feedbacks Aprovados
         </Typography>
         <List className={classes.list}>
           {events.length > 0 &&
