@@ -1,0 +1,20 @@
+{
+  "name": "hackerfolio-back",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "backend": "nodemon backend/main.js",
+    "frontend": "yarn start --prefix frontend",
+    "dev": "concurrently \"yarn backend\" \"yarn --cwd frontend start\""
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "concurrently": "^4.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.17"
+  }
+}
