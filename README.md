@@ -21,5 +21,6 @@
 - O banco de dados pode ser da sua escolha;
 
 ## Como rodar a aplicação
-    1. "yarn" na pasta raiz e depois "yarn" na pasta frontend.
-    2. "yarn dev"
+    1. Instale e rode o banco de dados https://www.mongodb.com/try/download/community
+    2. "yarn" na pasta raiz e depois "yarn" na pasta frontend.
+    3. "yarn dev"

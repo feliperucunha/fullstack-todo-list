@@ -27,7 +27,7 @@ export default function ButtonAppBar() {
         <Toolbar style={{ minHeight: "100px" }}>
           <Typography variant="h6" className={classes.title}>
             <Link style={{ textDecoration: "none", color: "inherit", fontSize: "25px", fontWeight: "bold" }} to="/">
-              HACKERFOLIO
+              Teste Viasoft
             </Link>
           </Typography>
           <Button variant="outlined" color="primary">
@@ -35,7 +35,7 @@ export default function ButtonAppBar() {
               style={{ textDecoration: "none", color: "inherit" }}
               to="/events/new"
             >
-              Create Event
+              Criar Feedback
             </Link>
           </Button>
         </Toolbar>
