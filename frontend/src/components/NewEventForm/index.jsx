@@ -10,11 +10,10 @@ import {
 import { Close as CloseIcon } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import axios from "axios";
-import Api from "../../service/Api";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "80vh",
+    height: "120vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-around",
     width: "50%",
-    height: "600px",
+    height: "100%",
     marginTop: "5% ",
   },
   title: {
@@ -49,15 +48,19 @@ export default function NewEventForm() {
   const [open, setOpen] = useState(false);
   const [isWaitingResponse, setIsWaitingResponse] = useState(false);
   const [name, setName] = useState("");
-  const [socialMediaLink, setSocialMediaLink] = useState("");
-  const [description, setDescription] = useState("");
+  const [improve, setImprove] = useState("");
+  const [keep, setKeep] = useState("");
+  const [sugestions, setSugestions] = useState("");
+  const [feedback, setFeedback] = useState("");
   const [date, setDate] = useState("2020-06-15");
   const handleFormSubmit = () => {
     const newEvent = {
       name,
-      social_media_link: socialMediaLink,
       date,
-      description,
+      improve,
+      keep,
+      sugestions,
+      feedback
     };
     setIsWaitingResponse(true);
     axios
@@ -73,9 +76,11 @@ export default function NewEventForm() {
   const handleClearForm = () => {
     const newEvent = {
       name: "",
-      social_media_link: "",
       date: "",
-      description: "",
+      improve: "",
+      keep: "",
+      sugestions: "",
+      feedback: "",
     };
   };
   const handleClose = (event, reason) => {
@@ -92,14 +97,14 @@ export default function NewEventForm() {
           <TextField
             style={{ width: "70%" }}
             variant="outlined"
-            label="Event Name"
+            label="Nome"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
             variant="outlined"
             style={{ width: "25%", marginLeft: "5%" }}
-            label="Event Date"
+            label="Data"
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -109,19 +114,39 @@ export default function NewEventForm() {
         <TextField
           className={classes.textInput}
           variant="outlined"
-          label="Social Media Link"
-          value={socialMediaLink}
-          onChange={(e) => setSocialMediaLink(e.target.value)}
+          label="Pontos a melhorar"
+          multiline={true}
+          rows={5}
+          value={improve}
+          onChange={(e) => setImprove(e.target.value)}
         />
         <TextField
           className={classes.textInput}
           variant="outlined"
-          label="Description"
+          label="Pontos a manter"
           multiline={true}
           rows={5}
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={keep}
+          onChange={(e) => setKeep(e.target.value)}
         />
+        <TextField
+          className={classes.textInput}
+          variant="outlined"
+          label="Sugestões"
+          multiline={true}
+          rows={5}
+          value={sugestions}
+          onChange={(e) => setSugestions(e.target.value)}
+        />
+        <TextField
+          className={classes.textInput}
+          variant="outlined"
+          label="Feedback final"
+          multiline={true}
+          rows={5}
+          value={feedback}
+          onChange={(e) => setFeedback(e.target.value)}
+        />                                
       </Paper>
       <Button
         onClick={handleFormSubmit}
@@ -133,7 +158,7 @@ export default function NewEventForm() {
         {isWaitingResponse ? (
           <CircularProgress size={24} color="inherit" />
         ) : (
-          "Submit Event"
+          "Enviar Feedback"
         )}
       </Button>
       <Snackbar
@@ -144,7 +169,7 @@ export default function NewEventForm() {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        message="Evento criado com sucesso!"
+        message="Feedback criado com sucesso!"
         action={
           <React.Fragment>
             <IconButton
