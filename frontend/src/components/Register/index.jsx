@@ -6,6 +6,12 @@ import { Redirect } from "react-router-dom"
 
 
 const Register = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password1: "",
+        password2: "",
+    })
     return (
         <div>
             asdad
