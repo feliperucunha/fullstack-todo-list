@@ -27,7 +27,7 @@ export default function ButtonAppBar() {
         <Toolbar style={{ minHeight: "100px" }}>
           <Typography variant="h6" className={classes.title}>
             <Link style={{ textDecoration: "none", color: "inherit", fontSize: "25px", fontWeight: "bold" }} to="/">
-              Teste Viasoft
+              TESTE VIASOFT
             </Link>
           </Typography>
           <Button variant="outlined" color="primary">
