@@ -97,7 +97,7 @@ export default function NewEventForm() {
           <TextField
             style={{ width: "70%" }}
             variant="outlined"
-            label="Nome"
+            label="Usuário"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />

@@ -34,7 +34,7 @@ mongoose
      useUnifiedTopology: true
     })
   .then((con) => {
-    console.log("Conectado ao banco de dados");
+    console.log("Conectado ao banco de dados [1/2]");
   })
   .catch((err) => {
     console.log(err);
@@ -51,5 +51,5 @@ app.use((req, res, next) => {
 //Port connection
 const PORT = process.env.PORT
 app.listen(PORT, () => {
-  console.log(`Servidor na porta ${PORT}`);
+  console.log(`Servidor na porta ${PORT} [2/2]`);
 });
